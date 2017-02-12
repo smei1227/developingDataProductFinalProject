@@ -1,0 +1,47 @@
+---
+title: "Location of Top FL Private High Schools"
+author: "Mei Sun"
+date: "February 11, 2017"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Assignment
+
+This is an R Markdown presentation as part of the final project of Developing Data Products course at Coursera.com. Course Project: Shiny Application and Reproducible Pitch. 
+
+This peer assessed assignment has two parts. 
+
+- Create a Shiny application and deploy it on Rstudio's servers. 
+- Use Slidify or Rstudio Presenter to prepare a reproducible pitch presentation about the application.
+
+## Shiny Application
+
+- Name of the App: **Location of Top FL Private High Schools**
+- Purpose of the App: *To help international students to choose a private high school in Florida based on the ranking and location of the school.*
+- Input of the App: Use a **Slider** to select the **Ranking** of the school in FL.
+- Output of the App: a **Interactive Map** showing the street location of the school. The map can be zoomed in and out. The school **Name**, **Ranking**, **Address**, **Telephone**, and **Home Page** are also displaced on the main panel.
+- `ui.R` and `server.R` code: The code of `ui.R` and `server.R` can be found here [link](https://github.com/smei1227/developingDataProductFinalProject).
+- App: Try the `Application` here [link](https://smei1227.shinyapps.io/FLprivateHighSchoolRank/).
+
+## Data Source of the Application
+
+1. Original Data Source
+   The original data source comes from the Niche report - *"2017 Best Private High Schools in Florida"*, link [link](https://k12.niche.com/rankings/private-high-schools/best-overall/s/florida/).
+
+2. Compiled data set `location data.csv' can be found here [link](https://github.com/smei1227/developingDataProductFinalProject).
+
+
+```{r, echo = FALSE, comment=""}
+hsdf <- read.csv(file="C:/Users/Mei/Documents/FL private HS/location data.csv", header=TRUE, sep=",")
+head(hsdf, 3)
+```
+
+## App Screen Shot
+
+```{r,echo= TRUE, out.width = "800px"}
+knitr::include_graphics("C:/Users/Mei/Documents/FL private HS/App screenshot.png")
+```
