@@ -1,11 +1,3 @@
-#
-# This is the user-interface definition of a Shiny web application. You can
-# run the application by clicking 'Run App' above.
-#
-# Find out more about building applications with Shiny here:
-# 
-#    http://shiny.rstudio.com/
-#
 
 library(shiny)
 library(leaflet)
@@ -22,6 +14,10 @@ shinyUI(fluidPage(
   # Sidebar with a slider input for number of bins 
   sidebarLayout(
     sidebarPanel(
+       h3("How to use this App?"),
+       h5("1. Move the slider to select the ranking of a high school in FL"),
+       h5("2. Press +/- to view the location of the high school in the map on the right."),
+       h5("3. The school name and other information will show below the map."),
        sliderInput("Rank",
                    "Number of ranking:",
                    min = 1,
